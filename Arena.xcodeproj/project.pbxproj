@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		490087A91D9B75DE007E47A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490087A81D9B75DE007E47A6 /* AppDelegate.swift */; };
-		490087AB1D9B75DE007E47A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490087AA1D9B75DE007E47A6 /* ViewController.swift */; };
 		490087AE1D9B75DE007E47A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490087AC1D9B75DE007E47A6 /* Main.storyboard */; };
 		490087B01D9B75DE007E47A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 490087AF1D9B75DE007E47A6 /* Assets.xcassets */; };
 		490087B31D9B75DE007E47A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490087B11D9B75DE007E47A6 /* LaunchScreen.storyboard */; };
 		490087BE1D9B75DE007E47A6 /* ArenaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490087BD1D9B75DE007E47A6 /* ArenaTests.swift */; };
 		490087C91D9B75DE007E47A6 /* ArenaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490087C81D9B75DE007E47A6 /* ArenaUITests.swift */; };
+		49344BF81DC24FB0005EF4BC /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49344BF71DC24FB0005EF4BC /* StartViewController.swift */; };
+		49344BFA1DC251F8005EF4BC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49344BF91DC251F8005EF4BC /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +35,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		490087A51D9B75DE007E47A6 /* Arena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		490087A81D9B75DE007E47A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		490087AA1D9B75DE007E47A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		490087AD1D9B75DE007E47A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		490087AF1D9B75DE007E47A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		490087B21D9B75DE007E47A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		490087B41D9B75DE007E47A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		490087B91D9B75DE007E47A6 /* ArenaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArenaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		490087BD1D9B75DE007E47A6 /* ArenaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArenaTests.swift; sourceTree = "<group>"; };
 		490087BF1D9B75DE007E47A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		490087C41D9B75DE007E47A6 /* ArenaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArenaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		490087C81D9B75DE007E47A6 /* ArenaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArenaUITests.swift; sourceTree = "<group>"; };
 		490087CA1D9B75DE007E47A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49344BEC1DC24784005EF4BC /* Arena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arena.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49344BED1DC24784005EF4BC /* ArenaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArenaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49344BEE1DC24784005EF4BC /* ArenaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArenaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49344BF71DC24FB0005EF4BC /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = ../StartViewController.swift; sourceTree = "<group>"; };
+		49344BF91DC251F8005EF4BC /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,25 +82,18 @@
 				490087A71D9B75DE007E47A6 /* Arena */,
 				490087BC1D9B75DE007E47A6 /* ArenaTests */,
 				490087C71D9B75DE007E47A6 /* ArenaUITests */,
-				490087A61D9B75DE007E47A6 /* Products */,
+				49344BEC1DC24784005EF4BC /* Arena.app */,
+				49344BED1DC24784005EF4BC /* ArenaTests.xctest */,
+				49344BEE1DC24784005EF4BC /* ArenaUITests.xctest */,
 			);
-			sourceTree = "<group>";
-		};
-		490087A61D9B75DE007E47A6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				490087A51D9B75DE007E47A6 /* Arena.app */,
-				490087B91D9B75DE007E47A6 /* ArenaTests.xctest */,
-				490087C41D9B75DE007E47A6 /* ArenaUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		490087A71D9B75DE007E47A6 /* Arena */ = {
 			isa = PBXGroup;
 			children = (
 				490087A81D9B75DE007E47A6 /* AppDelegate.swift */,
-				490087AA1D9B75DE007E47A6 /* ViewController.swift */,
+				49344BF71DC24FB0005EF4BC /* StartViewController.swift */,
+				49344BF91DC251F8005EF4BC /* TableViewCell.swift */,
 				490087AC1D9B75DE007E47A6 /* Main.storyboard */,
 				490087AF1D9B75DE007E47A6 /* Assets.xcassets */,
 				490087B11D9B75DE007E47A6 /* LaunchScreen.storyboard */,
@@ -142,7 +137,7 @@
 			);
 			name = Arena;
 			productName = Arena;
-			productReference = 490087A51D9B75DE007E47A6 /* Arena.app */;
+			productReference = 49344BEC1DC24784005EF4BC /* Arena.app */;
 			productType = "com.apple.product-type.application";
 		};
 		490087B81D9B75DE007E47A6 /* ArenaTests */ = {
@@ -160,7 +155,7 @@
 			);
 			name = ArenaTests;
 			productName = ArenaTests;
-			productReference = 490087B91D9B75DE007E47A6 /* ArenaTests.xctest */;
+			productReference = 49344BED1DC24784005EF4BC /* ArenaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		490087C31D9B75DE007E47A6 /* ArenaUITests */ = {
@@ -178,7 +173,7 @@
 			);
 			name = ArenaUITests;
 			productName = ArenaUITests;
-			productReference = 490087C41D9B75DE007E47A6 /* ArenaUITests.xctest */;
+			productReference = 49344BEE1DC24784005EF4BC /* ArenaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +211,7 @@
 				Base,
 			);
 			mainGroup = 4900879C1D9B75DE007E47A6;
-			productRefGroup = 490087A61D9B75DE007E47A6 /* Products */;
+			productRefGroup = 4900879C1D9B75DE007E47A6;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -259,8 +254,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				490087AB1D9B75DE007E47A6 /* ViewController.swift in Sources */,
+				49344BFA1DC251F8005EF4BC /* TableViewCell.swift in Sources */,
 				490087A91D9B75DE007E47A6 /* AppDelegate.swift in Sources */,
+				49344BF81DC24FB0005EF4BC /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +501,7 @@
 				490087CF1D9B75DE007E47A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		490087D01D9B75DE007E47A6 /* Build configuration list for PBXNativeTarget "ArenaTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +510,7 @@
 				490087D21D9B75DE007E47A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		490087D31D9B75DE007E47A6 /* Build configuration list for PBXNativeTarget "ArenaUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +519,7 @@
 				490087D51D9B75DE007E47A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
