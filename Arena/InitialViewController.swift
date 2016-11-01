@@ -1,23 +1,20 @@
 //
-//  StartViewController.swift
+//  InitialViewController.swift
 //  Arena
 //
-//  Created by Andrew Barber on 10/27/16.
+//  Created by Andrew Barber on 11/1/16.
 //  Copyright © 2016 Invictus. All rights reserved.
 //
 
 import UIKit
 
-class StartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class InitialViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var articles = ["Wolf", "Mother", "That", "Is", "All", "ALL HAIL THE WOLFMOTHER"]
-    
+    var articles = ["Thing 1", "Thing 2", "Thing 3", "Thing 4"]
+    var headlineTextToPass : String?
     
     @IBOutlet weak var tblArticles: UITableView!
     
-    
-    
-   
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -44,14 +41,10 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tblArticles.delegate = self
         tblArticles.dataSource = self
+        tblArticles.delegate = self
+        self.view.backgroundColor = .purple
         
-        self.view.backgroundColor = .magenta
-        
-        
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +52,25 @@ class StartViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func returnToInitialViewController(segue: UIStoryboardSegue) {
+        if let headlineSource = segue.source as? AddArticleViewController, let headLineText = headlineSource.headlineText {
+            articles.append(headLineText)
+        }
+        tblArticles.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        headlineTextToPass = articles[indexPath.row]
+        performSegue(withIdentifier: "bartov", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let contentDestination = segue.destination as? HeadLineViewController, let text = headlineTextToPass {
+            contentDestination.headLineText = text
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 

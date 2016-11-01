@@ -2,7 +2,7 @@
 //  TableViewCell.swift
 //  Arena
 //
-//  Created by Andrew Barber on 10/27/16.
+//  Created by Andrew Barber on 11/1/16.
 //  Copyright © 2016 Invictus. All rights reserved.
 //
 
@@ -10,7 +10,6 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var articleLabel: UILabel!
     
     override func awakeFromNib() {
