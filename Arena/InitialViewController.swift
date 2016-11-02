@@ -10,8 +10,9 @@ import UIKit
 
 class InitialViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    var articles = ["Thing 1", "Thing 2", "Thing 3", "Thing 4"]
-    var headlineTextToPass : String?
+    var articles = [Article]() //How to make an empty array of articles!
+    
+    var articleToPass : Article?
     
     @IBOutlet weak var tblArticles: UITableView!
     
@@ -25,8 +26,8 @@ class InitialViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
-        
-        cell.articleLabel.text = articles[indexPath.row]
+        let article = articles[indexPath.row]
+        cell.articleLabel.text = article.headline
         
         return cell
     }
@@ -41,6 +42,10 @@ class InitialViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let fakeArticle = Article(headline: "Sweet", author: "BARTOLVER THE BROTHER", articleContent: "There was war, watch out for this barbarian")
+        let fakeArtile2 = Article(headline: "Whoa", author: "Another Faker", articleContent: "This is a f a k e article. I wanted you to hear it from me personally.")
+        articles.append(fakeArticle)
+        articles.append(fakeArtile2)
         tblArticles.dataSource = self
         tblArticles.delegate = self
         self.view.backgroundColor = .purple
@@ -53,20 +58,20 @@ class InitialViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     @IBAction func returnToInitialViewController(segue: UIStoryboardSegue) {
-        if let headlineSource = segue.source as? AddArticleViewController, let headLineText = headlineSource.headlineText {
-            articles.append(headLineText)
+        if let headlineSource = segue.source as? AddArticleViewController, let article = headlineSource.articleContent {
+            articles.append(article)
         }
         tblArticles.reloadData()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        headlineTextToPass = articles[indexPath.row]
+        articleToPass = articles[indexPath.row]
         performSegue(withIdentifier: "bartov", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let contentDestination = segue.destination as? HeadLineViewController, let text = headlineTextToPass {
-            contentDestination.headLineText = text
+        if let contentDestination = segue.destination as? HeadLineViewController, let article = articleToPass {
+            contentDestination.article = article
         }
     }
     

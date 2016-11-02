@@ -17,6 +17,7 @@
 		49C81C1D1DC8CF9F00CBA2E5 /* AddArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C81C1C1DC8CF9F00CBA2E5 /* AddArticleViewController.swift */; };
 		49C81C1F1DC8D0A200CBA2E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C81C1E1DC8D0A200CBA2E5 /* Main.storyboard */; };
 		49C81C211DC8D65D00CBA2E5 /* HeadLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C81C201DC8D65D00CBA2E5 /* HeadLineViewController.swift */; };
+		49C81C251DC8DC0900CBA2E5 /* ArticleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C81C241DC8DC0900CBA2E5 /* ArticleClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		49C81C1C1DC8CF9F00CBA2E5 /* AddArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddArticleViewController.swift; sourceTree = "<group>"; };
 		49C81C1E1DC8D0A200CBA2E5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		49C81C201DC8D65D00CBA2E5 /* HeadLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadLineViewController.swift; sourceTree = "<group>"; };
+		49C81C241DC8DC0900CBA2E5 /* ArticleClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleClass.swift; path = ../ArticleClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				49C81C1A1DC8CE3700CBA2E5 /* InitialViewController.swift */,
 				49C81C1C1DC8CF9F00CBA2E5 /* AddArticleViewController.swift */,
 				49C81C201DC8D65D00CBA2E5 /* HeadLineViewController.swift */,
+				49C81C241DC8DC0900CBA2E5 /* ArticleClass.swift */,
 				49C81C1E1DC8D0A200CBA2E5 /* Main.storyboard */,
 				490087AF1D9B75DE007E47A6 /* Assets.xcassets */,
 				490087B11D9B75DE007E47A6 /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 				49C81C1B1DC8CE3700CBA2E5 /* InitialViewController.swift in Sources */,
 				49C81C1D1DC8CF9F00CBA2E5 /* AddArticleViewController.swift in Sources */,
 				49C81C191DC8CC9900CBA2E5 /* TableViewCell.swift in Sources */,
+				49C81C251DC8DC0900CBA2E5 /* ArticleClass.swift in Sources */,
 				490087A91D9B75DE007E47A6 /* AppDelegate.swift in Sources */,
 				49C81C211DC8D65D00CBA2E5 /* HeadLineViewController.swift in Sources */,
 			);

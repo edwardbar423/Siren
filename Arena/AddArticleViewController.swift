@@ -11,13 +11,14 @@ import UIKit
 class AddArticleViewController: UIViewController {
 
     
-    var headlineText : String?
+    var articleContent : Article?
     
     @IBOutlet weak var addArticleTextBox: UITextField!
-    
+    @IBOutlet weak var addAuthorTxtBox: UITextField!
+    @IBOutlet weak var addContentTxtBox: UITextView!
     
     @IBAction func addArticleBtn(_ sender: AnyObject) {
-        headlineText = addArticleTextBox.text
+        articleContent = Article(headline: addArticleTextBox.text, author: addAuthorTxtBox.text, articleContent: addContentTxtBox.text)
     }
     
     override func viewDidLoad() {

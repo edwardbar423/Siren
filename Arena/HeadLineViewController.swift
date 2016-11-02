@@ -10,15 +10,18 @@ import UIKit
 
 class HeadLineViewController: UIViewController {
 
-    var headLineText : String?
+    var article : Article?
     
     @IBOutlet weak var headLineLabel: UILabel!
-    
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var articleContent: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        headLineLabel.text = headLineText
+        headLineLabel.text = article?.headline
+        authorLabel.text = article?.author
+        articleContent.text = article?.articleContent
     }
 
     override func didReceiveMemoryWarning() {

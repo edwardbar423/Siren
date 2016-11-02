@@ -91,19 +91,39 @@
                                     <navigationItem title="Title" id="EnU-kY-G8a"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HeadLineLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dig-q9-Pp4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HeadLineLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dig-q9-Pp4">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3X-2C-Neu">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The things you typed" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxF-QW-Bi7">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Dig-q9-Pp4" firstAttribute="centerX" secondItem="QF4-KB-YC6" secondAttribute="centerX" id="GJ0-CD-GlN"/>
-                            <constraint firstItem="Dig-q9-Pp4" firstAttribute="centerY" secondItem="QF4-KB-YC6" secondAttribute="centerY" id="XMc-Nu-UqI"/>
+                            <constraint firstItem="V3X-2C-Neu" firstAttribute="leading" secondItem="QF4-KB-YC6" secondAttribute="leadingMargin" constant="8" id="0D8-rq-Wsr"/>
+                            <constraint firstItem="V3X-2C-Neu" firstAttribute="top" secondItem="Dig-q9-Pp4" secondAttribute="bottom" constant="8" id="2GR-9V-wlP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LxF-QW-Bi7" secondAttribute="trailing" constant="8" id="3jK-BG-Spy"/>
+                            <constraint firstItem="YZo-d1-oy6" firstAttribute="top" secondItem="LxF-QW-Bi7" secondAttribute="bottom" constant="8" id="5RV-z2-Dg7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dig-q9-Pp4" secondAttribute="trailing" constant="8" id="Cux-Ya-AQY"/>
+                            <constraint firstItem="Dig-q9-Pp4" firstAttribute="top" secondItem="aJZ-Dk-RaY" secondAttribute="bottom" constant="8" id="DKK-Ct-jlw"/>
+                            <constraint firstItem="Dig-q9-Pp4" firstAttribute="leading" secondItem="QF4-KB-YC6" secondAttribute="leadingMargin" constant="8" id="QmD-9n-lDC"/>
+                            <constraint firstItem="LxF-QW-Bi7" firstAttribute="leading" secondItem="QF4-KB-YC6" secondAttribute="leadingMargin" constant="8" id="Xqn-7W-6eH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V3X-2C-Neu" secondAttribute="trailing" constant="8" id="g0T-OB-7zR"/>
+                            <constraint firstItem="LxF-QW-Bi7" firstAttribute="top" secondItem="V3X-2C-Neu" secondAttribute="bottom" constant="8" id="xv5-ki-I3N"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="articleContent" destination="LxF-QW-Bi7" id="yML-hs-ReY"/>
+                        <outlet property="authorLabel" destination="V3X-2C-Neu" id="rhC-dP-5Se"/>
                         <outlet property="headLineLabel" destination="Dig-q9-Pp4" id="sQ4-NW-36X"/>
                     </connections>
                 </viewController>
@@ -140,26 +160,48 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqC-OP-Vz9">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="JxI-Jd-Tx7"/>
+                                </constraints>
                                 <state key="normal" title="Add Article"/>
                                 <connections>
                                     <action selector="addArticleBtn:" destination="4D0-jI-mBT" eventType="touchUpInside" id="wOF-uK-vOQ"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Who are you?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Fp-uw-Mzb">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write your Story." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hDU-gi-c2k">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="0Fp-uw-Mzb" firstAttribute="leading" secondItem="fKi-Lj-mVs" secondAttribute="leadingMargin" constant="8" id="9sp-Vo-aQf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="hDU-gi-c2k" secondAttribute="leading" id="B0X-p1-pS1"/>
+                            <constraint firstItem="uqC-OP-Vz9" firstAttribute="top" secondItem="hDU-gi-c2k" secondAttribute="bottom" constant="8" id="Dya-je-ZgL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Fp-uw-Mzb" secondAttribute="trailing" constant="8" id="Jqe-vk-NQo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vgt-bp-nyb" secondAttribute="trailing" constant="25" id="Jy4-KC-429"/>
+                            <constraint firstItem="hDU-gi-c2k" firstAttribute="top" secondItem="0Fp-uw-Mzb" secondAttribute="bottom" constant="8" id="NEz-B2-NUE"/>
                             <constraint firstAttribute="trailing" secondItem="hsd-IO-BQS" secondAttribute="trailing" id="Pm7-Qq-jv1"/>
+                            <constraint firstItem="uqC-OP-Vz9" firstAttribute="centerX" secondItem="hDU-gi-c2k" secondAttribute="centerX" id="V8N-cV-KAG"/>
                             <constraint firstItem="hsd-IO-BQS" firstAttribute="leading" secondItem="fKi-Lj-mVs" secondAttribute="leading" id="elw-jV-fGX"/>
-                            <constraint firstItem="uqC-OP-Vz9" firstAttribute="top" secondItem="vgt-bp-nyb" secondAttribute="bottom" constant="134" id="fyC-Od-YrT"/>
                             <constraint firstItem="hsd-IO-BQS" firstAttribute="top" secondItem="gAA-WX-RVh" secondAttribute="bottom" id="kf3-kB-z88"/>
-                            <constraint firstItem="uqC-OP-Vz9" firstAttribute="centerX" secondItem="fKi-Lj-mVs" secondAttribute="centerX" id="mEn-u3-PKV"/>
+                            <constraint firstItem="8YQ-sK-chf" firstAttribute="top" secondItem="uqC-OP-Vz9" secondAttribute="bottom" constant="20" id="myN-9n-wxR"/>
+                            <constraint firstItem="0Fp-uw-Mzb" firstAttribute="top" secondItem="vgt-bp-nyb" secondAttribute="bottom" constant="8" id="nU3-Lz-JzR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hDU-gi-c2k" secondAttribute="trailing" id="nwf-ak-0VX"/>
                             <constraint firstItem="vgt-bp-nyb" firstAttribute="leading" secondItem="fKi-Lj-mVs" secondAttribute="leadingMargin" constant="25" id="sO3-Hm-dhF"/>
-                            <constraint firstItem="vgt-bp-nyb" firstAttribute="top" secondItem="hsd-IO-BQS" secondAttribute="bottom" constant="90" id="sRf-gF-Y9a"/>
+                            <constraint firstItem="vgt-bp-nyb" firstAttribute="top" secondItem="hsd-IO-BQS" secondAttribute="bottom" constant="23" id="sRf-gF-Y9a"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addArticleTextBox" destination="vgt-bp-nyb" id="lgE-Wj-aFK"/>
+                        <outlet property="addAuthorTxtBox" destination="0Fp-uw-Mzb" id="kJe-Dm-RGp"/>
+                        <outlet property="addContentTxtBox" destination="hDU-gi-c2k" id="g89-vp-f96"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQu-yl-JhF" userLabel="First Responder" sceneMemberID="firstResponder"/>
