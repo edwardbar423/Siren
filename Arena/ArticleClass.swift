@@ -2,7 +2,7 @@
 //  ArticleClass.swift
 //  Arena
 //
-//  Created by Andrew Barber on 11/1/16.
+//  Created by Andrew Barber on 11/14/16.
 //  Copyright © 2016 Invictus. All rights reserved.
 //
 
@@ -12,13 +12,11 @@ class Article {
     
     var headline : String?
     var author : String?
-    var articleContent : String?
-    
-    init(headline : String?, author: String?, articleContent : String?) {
+    var content : String?
+    init(headline : String?, author : String?, content : String?) {
         self.headline = headline
         self.author = author
-        self.articleContent = articleContent
+        self.content = content
     }
-    
     
 }
